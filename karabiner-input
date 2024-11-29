@@ -1,0 +1,34 @@
+{
+    "description": "input switch",
+    "manipulators": [
+        {
+            "from": {
+                "key_code": "0",
+                "modifiers": { "mandatory": ["command", "shift"] }
+            },
+            "parameters": { "basic.to_delayed_action_delay_milliseconds": 200 },
+            "to": [
+              { "select_input_source": { "input_source_id": "com.apple.inputmethod.Korean.2SetKorean" } },
+              { "key_code": "caps_lock" }
+            ],
+            "to_delayed_action": { "to_if_invoked": [{ "key_code": "caps_lock" }] },
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "8",
+                "modifiers": { "mandatory": ["command", "shift"] }
+            },
+            "to": [{ "select_input_source": { "input_source_id": "com.apple.keylayout.Brazilian-ABNT2" } }],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "9",
+                "modifiers": { "mandatory": ["command", "shift"] }
+            },
+            "to": [{ "select_input_source": { "input_source_id": "com.apple.keylayout.ABC" } }],
+            "type": "basic"
+        }
+    ]
+}
